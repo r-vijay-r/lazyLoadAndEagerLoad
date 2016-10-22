@@ -4,7 +4,7 @@ import { EagerModuleComponent } from './eager-module.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-{ path: 'eager', component: EagerModuleComponent }
+{ path: 'Home', component: EagerModuleComponent }
 ];
 
 @NgModule({

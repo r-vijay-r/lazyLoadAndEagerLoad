@@ -6,9 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { EagerModuleModule } from './eager-module/eager-module.module';
+import { MaterialModule } from '@angular/material';
 
 const appRoutes: Routes = [
-{ path: '', redirectTo: 'eager', pathMatch: 'full' },
+{ path: '', redirectTo: 'Home', pathMatch: 'full' },
 { path: 'lazy', loadChildren: 'app/lazy-module/lazy-module.module#LazyModuleModule' }
 ];
 
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    EagerModuleModule
+    EagerModuleModule,
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
